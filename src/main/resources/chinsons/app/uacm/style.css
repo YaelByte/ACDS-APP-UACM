@@ -1,0 +1,114 @@
+/* =================================================================
+   ESTILOS JAVAFX CSS - UACM (Compatible con Scene Builder y NetBeans)
+   ================================================================= */
+
+/* Definición de colores institucionales mediante variables */
+* {
+    -uacm-rojo: #9E1B32;
+    -uacm-rojo-oscuro: #7A1325;
+    -uacm-gris-claro: #F4F4F4;
+    -uacm-gris-texto: #333333;
+    -uacm-blanco: #FFFFFF;
+}
+
+/* --- Fondo general de la ventana o contenedor principal --- */
+.root {
+    -fx-background-color: -uacm-blanco;
+    -fx-font-family: 'Arial', sans-serif;
+}
+
+/* --- Contenedor estilo tarjeta de inicio de sesión --- */
+.login-card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 20px;
+    -fx-padding: 30px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.15), 20, 0, 0, 10);
+}
+
+/* --- Paneles con fondo rojo institucional --- */
+.red-background {
+    -fx-background-color: -uacm-rojo;
+}
+
+/* --- Títulos y etiquetas --- */
+.label {
+    -fx-text-fill: -uacm-gris-texto;
+    -fx-font-size: 14px;
+}
+
+.title-label {
+    -fx-text-fill: -uacm-rojo;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+/* --- Campos de texto (TextField y PasswordField) --- */
+.text-field, .password-field {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 8px;
+    -fx-border-color: #CCCCCC;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: #999999;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: -uacm-rojo;
+    -fx-border-width: 1.5px;
+}
+
+/* --- Botón principal institucional --- */
+.button {
+    -fx-background-color: -uacm-rojo;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 25px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: -uacm-rojo-oscuro;
+}
+
+.button:pressed {
+    -fx-background-color: #5C0E1C;
+}
+
+.campo-texto-redondo {
+    -fx-background-color: #f4f4f4; /* Color de fondo suave */
+    -fx-background-radius: 10;    /* Esto da la forma redondeada */
+    -fx-border-color: #cccccc;    /* Color del borde gris claro */
+    -fx-border-radius: 10;        /* Debe coincidir con el radio del fondo */
+    -fx-padding: 5 15 5 15;       /* Espacio interno para que el texto no toque los bordes */
+    -fx-border-width: 1;
+    -fx-font-family: 'Roboto';
+    -fx-font-size: 12px;
+}
+
+.Contenedor-Redondo:focused {
+    -fx-background-color: white;
+    -fx-border-color: #387eb9;    /* Azul para resaltar el foco */
+    -fx-border-width: 2;          /* Borde un poco más grueso al escribir */
+}
+
+.Campo-Texto-redondo {
+    -fx-background-color: #f4f4f4; /* Color de fondo suave */
+    -fx-background-radius: 10;    /* Esto da la forma redondeada */
+    -fx-border-color: #cccccc;    /* Color del borde gris claro */
+    -fx-border-radius: 10;        /* Debe coincidir con el radio del fondo */
+    -fx-padding: 5 15 5 15;       /* Espacio interno para que el texto no toque los bordes */
+    -fx-border-width: 1;
+    -fx-font-family: 'Roboto';
+    -fx-font-size: 12px;
+}
+
+/* Efecto cuando el usuario hace clic para escribir */
+.Campo-Texto-redondo:focused {
+    -fx-background-color: white;
+    -fx-border-color: #387eb9;    /* Azul para resaltar el foco */
+    -fx-border-width: 2;          /* Borde un poco más grueso al escribir */
+}
