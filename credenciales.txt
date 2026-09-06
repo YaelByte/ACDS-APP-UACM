@@ -1,0 +1,3 @@
+admin@uacm.edu.mx,Admin123$,Administrador
+alumno@uacm.edu.mx,Vampiro123$,Alejandro
+trevor@uacm.edu.mx,Secreto456#,Trevor

@@ -20,7 +20,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 640, 480);
+    scene = new Scene(loadFXML("Control_Acceso"), 640, 480); 
         stage.setScene(scene);
         stage.show();
     }
@@ -34,7 +34,14 @@ public class App extends Application {
         return fxmlLoader.load();
     }
 
-    public static void main(String[] args) {
+public static void main(String[] args) {
+        // --- PRUEBAS TEMPORALES DEL MOTOR ---
+        validadorCredenciales motor = new validadorCredenciales();
+        
+        System.out.println("Prueba 1 (Fallo Regex): " + motor.validarFormatosPrevios("trevor@uacm.edu.mx", "123"));
+        System.out.println("Prueba 2 (Fallo Correo): " + motor.validarFormatosPrevios("trevor@gmail.com", "Secreto456#"));
+        System.out.println("Prueba 3 (Formato OK): " + motor.validarFormatosPrevios("trevor@uacm.edu.mx", "Secreto456#"));
+        
         launch();
     }
 

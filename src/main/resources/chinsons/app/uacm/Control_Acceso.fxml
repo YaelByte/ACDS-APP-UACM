@@ -2,29 +2,47 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane accessibleRole="BUTTON" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: #9E1B32;" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<Pane accessibleRole="BUTTON" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: #9E1B32;" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chinsons.app.uacm.ControlAccesoController">
    <children>
       <Pane layoutX="41.0" layoutY="76.0" prefHeight="449.0" prefWidth="253.0" style="-fx-background-color: #FFFFFF;">
          <children>
             <Label layoutX="41.0" layoutY="196.0" prefHeight="21.0" prefWidth="181.0" styleClass="title-label" text="Ingresa tu correo institucional:">
                <font>
                   <Font size="11.0" />
-               </font></Label>
+               </font>
+            </Label>
+            
+            <!-- Campo de Correo -->
             <TextField fx:id="FieldCorreo" layoutX="9.0" layoutY="225.0" prefHeight="25.0" prefWidth="231.0" promptText="correo" styleClass="text-field" />
+            
             <Label layoutX="89.0" layoutY="272.0" prefHeight="17.0" prefWidth="80.0" styleClass="title-label" text="Contraseña:" />
-            <TextField fx:id="FieldCorreo" layoutX="13.0" layoutY="298.0" prefHeight="25.0" prefWidth="231.0" promptText="Contraseña" styleClass="text-field" />
-            <Button fx:id="bttnIngresar" layoutX="25.0" layoutY="360.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="204.0" text="Ingresar" textFill="WHITE" />
+            
+            <!-- Campo de Clave PasswordField-->
+            <PasswordField fx:id="FieldClave" layoutX="13.0" layoutY="298.0" prefHeight="25.0" prefWidth="231.0" promptText="Contraseña" styleClass="text-field" />
+            
+            <!-- Botón de Ingreso -->
+            <Button fx:id="bttnIngresar" layoutX="25.0" layoutY="360.0" mnemonicParsing="false" onAction="#botonIngresarPresionado" prefHeight="42.0" prefWidth="204.0" text="Ingresar" textFill="WHITE" />
+            
+            <!-- Etiqueta para mostrar los errores de validación y bloqueos -->
+            <Label fx:id="etiquetaMensaje" alignment="CENTER" layoutX="9.0" layoutY="410.0" prefHeight="30.0" prefWidth="231.0" textAlignment="CENTER" textFill="#ff4500" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Label>
+
             <ImageView fitHeight="122.0" fitWidth="200.0" layoutX="25.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../src/Logo_imagen.png" />
                </image>
             </ImageView>
-         </children></Pane>
+         </children>
+      </Pane>
    </children>
 </Pane>
