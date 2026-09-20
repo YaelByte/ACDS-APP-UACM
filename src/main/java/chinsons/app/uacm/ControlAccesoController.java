@@ -6,10 +6,16 @@ package chinsons.app.uacm;
  */
 
 
+import java.io.IOException;
+import static java.lang.System.in;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class ControlAccesoController {
 
@@ -25,7 +31,7 @@ public class ControlAccesoController {
     private validadorCredenciales motorValidador = new validadorCredenciales();
 
     @FXML
-    private void botonIngresarPresionado() {
+    private void botonIngresarPresionado() throws IOException {
         // Obtenemos los textos que ingresó el usuario
         String correo = FieldCorreo.getText();
         String clave = FieldClave.getText();
@@ -37,6 +43,24 @@ public class ControlAccesoController {
 
         if (respuestaFiltro.equals("OK")) {
             // 2. Si el formato cumple, procedemos a leer el archivo de texto
+            try{
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/chinsons/app/uacm/Dashboard.fxml"));
+            Parent root = loader.load();
+            
+            javafx.stage.Stage stage = (javafx.stage.Stage) etiquetaMensaje.getScene().getWindow();
+            
+            javafx.scene.Scene scene = new javafx.scene.Scene(root);
+            stage.setResizable(false);
+            stage.setScene(scene);
+            stage.centerOnScreen();
+            stage.show();
+            
+            }catch(java.io.IOException e){
+            
+                System.out.println("Error al cargar");
+                e.fillInStackTrace();
+            
+            }
             String respuestaArchivo = motorValidador.verificarEnArchivo(correo, clave);
             etiquetaMensaje.setText(respuestaArchivo);
 
