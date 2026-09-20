@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane accessibleRole="BUTTON" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: #FFFFFF;" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chinsons.app.uacm.DashboardController">
+   <children>
+      <Pane layoutX="-12.0" prefHeight="100.0" prefWidth="347.0" style="-fx-background-color: #9E1B32;">
+         <children>
+            <Label layoutX="34.0" layoutY="34.0" prefHeight="45.0" prefWidth="200.0" styleClass="title-label" text="Sistema Institucional" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Italic" size="48.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="Avatar" fitHeight="65.0" fitWidth="127.0" layoutX="262.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../src/usuario.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="Calendario" layoutX="68.0" layoutY="109.0" prefHeight="138.0" prefWidth="200.0" style="-fx-border-color: #9E1B32;" styleClass="Campo-Texto-redondo">
+         <children>
+            <ImageView fitHeight="92.0" fitWidth="200.0" layoutX="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../src/calendario.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="67.0" layoutY="104.0" text="Calendario" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <Pane fx:id="Profesores" layoutX="68.0" layoutY="258.0" prefHeight="138.0" prefWidth="200.0" style="-fx-border-color: #9E1B32;" styleClass="Campo-Texto-redondo">
+         <children>
+            <ImageView fitHeight="92.0" fitWidth="200.0" layoutX="53.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../src/profesor.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="67.0" layoutY="114.0" text="Profesores" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <Pane fx:id="Calificaciones" layoutX="68.0" layoutY="404.0" prefHeight="138.0" prefWidth="200.0" style="-fx-border-color: #9E1B32;" styleClass="Campo-Texto-redondo">
+         <children>
+            <ImageView fitHeight="92.0" fitWidth="200.0" layoutX="53.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../src/calificaciones.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="58.0" layoutY="114.0" text="Calificaciones" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+   </children>
+</Pane>

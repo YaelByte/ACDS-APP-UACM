@@ -32,13 +32,13 @@
 
 /* --- Títulos y etiquetas --- */
 .label {
-    -fx-text-fill: -uacm-gris-texto;
+    -fx-text-fill: #000000;
     -fx-font-size: 14px;
 }
 
 .title-label {
-    -fx-text-fill: -uacm-rojo;
-    -fx-font-size: 12px;
+    -fx-text-fill: white;
+    -fx-font-size: 19px;
     -fx-font-weight: bold;
 }
 
